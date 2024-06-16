@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  zabbix-agent:
+    image: '${ZABBIX_AGENT_IMAGE}'
+    restart: always
+    privileged: true
+    ports:
+      - 10050:10050
+    env_file: .env
