@@ -12,11 +12,15 @@ function start() {
     docker-compose up --build -d
 }
 
+function stop() {
+    docker-compose down
+}
+
 function logs() {
     docker-compose logs -f
 }
 
-commands=(start logs)
+commands=(start stop logs)
 
 if [[ $# -gt 0 ]] && [[ "${commands[@]}" =~ "$1" ]]; then
 	$@;

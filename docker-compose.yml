@@ -8,3 +8,9 @@ services:
     ports:
       - 10050:10050
     env_file: .env
+#     networks:
+#       - shared_network
+
+# networks:
+#   shared_network:
+#     external: true
